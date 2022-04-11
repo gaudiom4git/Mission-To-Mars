@@ -83,16 +83,16 @@ def featured_image(browser):
     try:
         # Find the relative image url
         img_url_rel = img_soup.find('img', class_='fancybox-image').get('src')
-        #img_url_rel
+        #print(img_url_rel)
 
     except AttributeError:
         return None
 
     # Use the base URL to create an absolute URL
     img_url = f'https://spaceimages-mars.com/{img_url_rel}' 
-    #img_url
+    print(img_url)
 
-    return None
+    return img_url
 # ## Mars Facts
 
 #10.3.5 - Send to Pandas

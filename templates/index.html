@@ -26,6 +26,8 @@
                         <h4>{{mars.news_title}}</h4>
                         <p>{{ mars.news_paragraph }}</p>
                     </div>
+                </div>
+            </div>        
         </div>
         <!-- Featured Image -->
         <!-- First level -->
@@ -39,11 +41,23 @@
             <div class="col-md-4">
                 <!-- Mars Facts -->
                 <div class="row" id="mars-facts">
-                <h4>Mars Facts</h4>
-                {{ mars.facts | safe }}
+                    <h4>Mars Facts</h4>
+                    {{ mars.facts | safe }}
                 </div>
             </div>
         </div>
+        <h3>Mars Hemispheres</h3>
+        {% for hemisphere in mars.hemispheres %}
+        <!-- Mars Hemisperes -->
+        <div class="col-md-2">
+            <div class="thumbnail">
+                <img src="{{hemisphere.imge_url}}" class="img-responsive" alt="{{hemisphere.title}}">
+                <div class="caption">
+                    <p>{{ hemisphere.title }}</p>
+                </div>     
+            </div>
+        </div>
+        {% endfor %}
     </div> 
 </body>
 </html>
